@@ -5,4 +5,9 @@ class Traveler < ApplicationRecord
     has_many :destinations, through: :wishlists
     has_many :reviews
     has_many :pois, through: :reviews
+
+    def full_name
+        self.first_name + " " + self.last_name
+    end
+
 end
