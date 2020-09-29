@@ -1,0 +1,7 @@
+<h1>Points of Interest</h1>
+<hr>
+<% @pois.each do | poi |%>
+<ul>
+    <li><%= link_to poi.name, poi_path(poi) %></li>
+</ul>
+<% end %>

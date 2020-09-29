@@ -9,4 +9,19 @@
 <br>
 
 
-<%= render 'form' %>
+<%= form_with model: @traveler do | f |%>
+
+<%= f.label :email%>
+<%= f.text_field :email %>
+
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.submit %>
+<% end %>

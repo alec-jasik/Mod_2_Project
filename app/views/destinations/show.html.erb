@@ -1,0 +1,7 @@
+<h1> <%=@destination.city_name%>, <%=@destination.country_name%>: </h1>
+
+<p> <%=@destination.city_name%> is a city in <%=@destination.country_name%>.</p>
+<p> Continent: <%=@destination.continent%></p>
+
+<h2> Some common points of interest are listed below:</h2>
+<p> <%=@pois.find_by(destination_id: @destination.id).name%> 

@@ -1,0 +1,8 @@
+<h1><%= @poi.name %></h1>
+
+<%= @destinations.find_by(id: @poi.destination_id).city_name%>, <%= @destinations.find_by(id: @poi.destination_id).country_name%>
+
+<hr>
+<p><%= @poi.description %></p>
+
+

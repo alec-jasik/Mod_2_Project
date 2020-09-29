@@ -2,4 +2,6 @@
 <hr>
 <p>Name: <%= @traveler.full_name %></p>
 
+<%= link_to "Edit Profile", edit_traveler_path%>
+</br>
 <%= button_to "Delete Profile", {:controller => :travelers, :action => 'destroy', :id => @traveler.id }, :method => :delete %>

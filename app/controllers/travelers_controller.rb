@@ -21,25 +21,26 @@ class TravelersController < ApplicationController
           flash[:errors] = @traveler.errors.full_messages
           redirect_to new_traveler_path
         end
-      end
+    end
 
-      def edit
-        @traveler = Traveler.find(params[:id])
-      end
+    def edit
+      @traveler = Traveler.find(params[:id])
+    end
     
-      def update
-        @traveler = Traveler.find(params[:id])
-        @traveler.update(trav_params)
+    def update
+      @traveler = Traveler.find(params[:id])
+      @traveler.update(trav_params)
+      byebug
     
-        redirect_to @traveler
-      end
+      redirect_to @traveler
+    end
 
-      def destroy
-        @traveler = Traveler.find(params[:id])
-        @traveler.destroy
+    def destroy
+      @traveler = Traveler.find(params[:id])
+      @traveler.destroy
     
-        redirect_to travelers_path
-      end
+      redirect_to travelers_path
+    end
 
     private
     def trav_params
