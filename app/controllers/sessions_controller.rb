@@ -5,11 +5,6 @@ class SessionsController < ApplicationController
     end
 
     def create
-        # check User password input vs User password in db 
-        # .authenticate
-        # find userr
-        # check if there is a user&& if their password matches
-        # THEN store id in session
         @traveler = Traveler.find_by(email: params[:traveler][:email])
         if @traveler && @traveler.authenticate(params[:traveler][:password])
             session[:id] = @traveler.id
@@ -28,7 +23,7 @@ class SessionsController < ApplicationController
     private 
 
     def traveler_params
-        params.require(:user).permit(:email, :password)
+        params.require(:traveler).permit(:email, :password)
     end
 
 
