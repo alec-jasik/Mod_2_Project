@@ -17,7 +17,7 @@ class TripsController < ApplicationController
         if @trip.valid?
           @trip.save
         #   byebug
-          redirect_to trips_path(@trip)
+          redirect_to traveler_path(@trip.traveler)
         else
           flash[:errors] = @trip.errors.full_messages
           redirect_to new_trip_path

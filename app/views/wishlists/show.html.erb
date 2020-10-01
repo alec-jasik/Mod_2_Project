@@ -1,8 +1,13 @@
-<h1>Wishlist</h1>
+<h1><%= @wishlist.traveler.full_name%>'s <%= @wishlist.destination.city_name%> wishlist!</h1>
 <hr>
 
-
-<%= link_to "Click here to edit this Wishlist!", edit_wishlist_path%>
+<p><%= link_to @wishlist.traveler.full_name, traveler_path(@wishlist.traveler)%> wants to visit <%= link_to @wishlist.destination.city_name, destination_path(@wishlist.destination)%>, <%=@wishlist.destination.country_name%>.</p>
+<hr>
+</br>
+<%= link_to "Click here to edit this wishlist!", edit_wishlist_path%>
 </br>
 </br>
-<%= button_to "Delete Wishlist", {:controller => :wishlists, :action => 'destroy', :id => @wishlist.id }, :method => :delete %>
+<%= button_to "Delete wishlist", {:controller => :wishlists, :action => 'destroy', :id => @wishlist.id }, :method => :delete %>
+</br>
+</br>
+<%= link_to "Click here to return to all wishlists!", wishlists_path%>

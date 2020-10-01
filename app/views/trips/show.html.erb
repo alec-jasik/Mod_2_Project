@@ -1,8 +1,13 @@
-<h1>Trip</h1>
+<h1><%= @trip.traveler.full_name%>'s <%= @trip.destination.city_name%> trip!</h1>
 <hr>
 
-
+<p><%= link_to @trip.traveler.full_name, traveler_path(@trip.traveler)%> has visited <%= link_to @trip.destination.city_name, destination_path(@trip.destination)%>, <%=@trip.destination.country_name%>.</p>
+<hr>
+</br>
 <%= link_to "Click here to edit this trip!", edit_trip_path%>
 </br>
 </br>
 <%= button_to "Delete Trip", {:controller => :trips, :action => 'destroy', :id => @trip.id }, :method => :delete %>
+</br>
+</br>
+<%= link_to "Click here to return to all trips!", trips_path%>

@@ -5,13 +5,20 @@
 
 <h2> Some common points of interest are listed below:</h2>
  <% @destination.pois.each do |poi| %> 
- <%= link_to poi.name, poi_path(poi) %>
+ <li><%=  link_to poi.name, poi_path(poi) %></li>
  <% end %>
-</br>
+ <hr>
 </br>
 <%= link_to "Click here to edit this Destination!", edit_destination_path%>
 </br>
 </br>
 <%= button_to "Delete Destination", {:controller => :destinations, :action => 'destroy', :id => @destination.id }, :method => :delete %>
+<hr>
+<%= link_to "Click here to create a new trip!", new_trip_path%>
 </br>
-</br><p><%=link_to image_tag(@destination.img_url)%></p>
+</br>
+<%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%>
+</br>
+</br>
+<%= link_to "Click here to return to all Destinations" , destinations_path %>
+<p><%=link_to image_tag(@destination.img_url)%></p>

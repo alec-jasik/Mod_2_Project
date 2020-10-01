@@ -2,8 +2,11 @@
 <hr>
 <% @wishlists.each do | wishlist|%>
 <ul>
-    <li><%= link_to wishlist.destination.city_name, wishlist_path(wishlist)%></li>
+    <li><%= link_to wishlist.traveler.full_name, traveler_path(wishlist.traveler) %> wants to take a trip to <%= link_to wishlist.destination.city_name, wishlist_path(wishlist)%></li>
 </ul>
 <% end %>
-
+<hr>
 <%= link_to "Click here to add a trip to your wishlist" , new_wishlist_path %>
+</br>
+</br>
+<%= link_to "Click here to return to our home page!", travelers_path%>

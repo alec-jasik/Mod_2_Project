@@ -1,12 +1,15 @@
-<h1><%= @review.title %></h1>
+<h1>Review of <%= @review.poi.name %>: "<%= @review.title %>"</h1>
+<%=link_to @review.poi.destination.city_name, destination_path(@review.poi.destination)%>, <%= @review.poi.destination.country_name%>
 <hr>
 <%= @review.description %> <br><br>
 <h3>Rating (1 - 5 stars):  <%= @review.rating%></h3>
-
-
-</br>
+<p>Written by: <%= link_to @review.traveler.full_name, traveler_path(@review.traveler) %></p>
+<hr>
 </br>
 <%= link_to "Click here to edit this Review!", edit_review_path%>
 </br>
 </br>
 <%= button_to "Delete Review", {:controller => :reviews, :action => 'destroy', :id => @review.id }, :method => :delete %>
+</br>
+</br>
+<%= link_to "Click here to return to all the reviews", reviews_path%>

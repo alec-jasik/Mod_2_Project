@@ -1,9 +1,23 @@
-<h1>Traveler Profile</h1>
+<h1><%= @traveler.full_name %>'s Profile</h1>
 <hr>
 <p>Name: <%= @traveler.full_name %></p>
 <p>Age: <%= @traveler.age %></p>
 <p>email: <%= @traveler.email %></p>
+<hr>
+<h4><%= @traveler.full_name %>'s Trips:</h4>
+<% @traveler.trips.each do | trip |%>
+<li> Has visited <%= link_to trip.destination.city_name, destination_path(trip.destination) %>,  <%= trip.destination.country_name %></li>
+<% end %>
+<h4><%= @traveler.full_name %>'s Wishlist:</h4>
+<% @traveler.wishlists.each do | wishlist |%>
+<li> Wishes to visit <%= link_to wishlist.destination.city_name, destination_path(wishlist.destination) %>,  <%= wishlist.destination.country_name %></li>
+<% end %>
 
+<hr>
+</br>
+<%= link_to "Click here to go to our home page!", travelers_path%>
+</br>
+</br>
 <%= link_to "Click here to edit this traveler!", edit_traveler_path%>
 </br>
 </br>

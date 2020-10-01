@@ -1,8 +1,37 @@
+index.html.erb for Traveler
 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #FEF9ED;
+}
 
-How to add placeholder to dropdown menu (reviews/form) #research this (placeholder on erb forms)
+h1 {
+  color: black;
+  font-family: arial;
+  text-align: center;
+}
 
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
 
+<h1>Welcome Traveler!</h1>
+<hr>
 
+<%= link_to "Click here to view our Destinations" , destinations_path %>
+</br>
+</br>
+<%= link_to "Click here to view our Points of Interest" , pois_path %>
+</br>
+</br>
+<%= link_to "Click here to view all of our Reviews" , reviews_path %>
 
-
+</body>
+</html>

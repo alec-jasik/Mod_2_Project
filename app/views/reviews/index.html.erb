@@ -1,10 +1,11 @@
-<h1>List of Reviews</h1>
+<h1>List of all Reviews</h1>
 <hr>
 
 <% @reviews.each do | review |%>
-<ul>
-    <li><%= link_to review.title, review_path(review) %></li>
-</ul>
+  <li><%=review.poi.name%>: "<%= link_to review.title, review_path(review) %>"</li>
 <% end %>
-
+<hr>
 <%= link_to "Click here to create a new Review" , new_review_path %>
+</br>
+</br>
+<%= link_to "Click here to return to our home page!", travelers_path%>

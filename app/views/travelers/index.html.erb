@@ -1,7 +1,42 @@
-<h1>List of Travelers</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #FEF9ED;
+}
 
+h1 {
+  color: black;
+  font-family: arial;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+</head>
+<body></body>
+
+<h1>Welcome Traveler!</h1>
 <hr>
-<% @travelers.each do | traveler |%>
-<% end %>
 
-<%= link_to "Click here to create a new Traveler" , new_traveler_path %>
+<%= link_to "Click here to view our Destinations" , destinations_path %>
+</br>
+</br>
+<%= link_to "Click here to view our Points of Interest" , pois_path %>
+</br>
+</br>
+<%= link_to "Click here to view all of our Reviews" , reviews_path %>
+</br>
+</br>
+<%= link_to "Click here to view a list of everyone's trips" , trips_path %>
+</br>
+</br>
+<%= link_to "Click here to view a list of everyone's wishlists" , wishlists_path %>
+</br>
+</br>
+</body>
+</html>

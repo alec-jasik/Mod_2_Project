@@ -17,7 +17,7 @@ class WishlistsController < ApplicationController
         if @wishlist.valid?
           @wishlist.save
         #   byebug
-          redirect_to wishlists_path(@wishlist)
+          redirect_to traveler_path(@wishlist.traveler)
         else
           flash[:errors] = @wishlist.errors.full_messages
           redirect_to new_wishlist_path

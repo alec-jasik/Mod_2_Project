@@ -4,6 +4,7 @@ class TravelersController < ApplicationController
 
     def index
         @travelers = Traveler.all
+        @destinations = Destination.all
       
     end
 
