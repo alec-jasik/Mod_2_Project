@@ -1,4 +1,69 @@
-<h1>List of Destinations</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #ffe8cc;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #ffe8cc;
+  padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <%= link_to "Home", visit_reviews_path%>
+  <%= link_to "Destinations", destinations_path %>
+  <%= link_to "Points of Interest", pois_path %>
+  <%= link_to "Reviews", reviews_path %>
+  <%= link_to "Wishlists", wishlists_path %>
+  <%= link_to "Trips", trips_path %>
+</div>
+
+<div class="content">
+  <h1>List of Destinations:</h1>
 <hr>
 <h4> Click on a destination to learn more about it!</h4>
 <% @destinations.each do | destination |%>
@@ -6,13 +71,13 @@
     <li><%= link_to destination.city_name, destination_path(destination) %>, <%= destination.country_name %></li>
 </ul>
 <% end %>
-<hr>
-<p>If theres a place you'd like to visit and it is not listed in our database please: <%= link_to "Click here to create a new Destination" , new_destination_path %> </p>
+</div>
 
-<%= link_to "Click here to create a new trip!", new_trip_path%>
-</br>
-</br>
-<%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%>
-</br>
-</br>
-<%= link_to "Click here to return to our home page!", travelers_path%>
+<div class="footer">
+<p>If theres a place you'd like to visit and it is not listed in our database please: <%= link_to "Click here to create a new Destination" , new_destination_path %> </p>
+<p><%= link_to "Click here to create a new trip!", new_trip_path%></p>
+<p><%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%></p>
+</div>
+
+</body>
+</html>

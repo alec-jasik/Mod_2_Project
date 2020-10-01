@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :trips
   resources :wishlists
   resources :sessions
+  resources :visit_reviews
+
   get '/sign_in', to: 'sessions#sign_in'
   post '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'

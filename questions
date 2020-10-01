@@ -1,37 +1,75 @@
-index.html.erb for Traveler
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  background-color: #FEF9ED;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #ffe8cc;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
   color: black;
-  font-family: arial;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #ffe8cc;
+  padding: 10px;
 }
 </style>
 </head>
 <body>
 
-<h1>Welcome Traveler!</h1>
-<hr>
+<div class="topnav">
+  <%= link_to "Home", travelers_path%>
+  <%= link_to "Destinations", destinations_path %>
+  <%= link_to "Points of Interest", pois_path %>
+  <%= link_to "Reviews", reviews_path %>
+  <%= link_to "Wishlists", wishlists_path %>
+  <%= link_to "Trips", trips_path %>
+</div>
 
-<%= link_to "Click here to view our Destinations" , destinations_path %>
-</br>
-</br>
-<%= link_to "Click here to view our Points of Interest" , pois_path %>
-</br>
-</br>
-<%= link_to "Click here to view all of our Reviews" , reviews_path %>
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A topnav, content and a footer.</p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
 
 </body>
 </html>

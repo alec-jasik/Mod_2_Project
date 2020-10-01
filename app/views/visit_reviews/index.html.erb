@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-display-container" style="margin-bottom:50px">
+  <img src="https://www.w3schools.com/w3images/beach3.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+   style="bottom:10%;opacity:0.7;width:70%">
+  <h2><b>Welcome Traveler!<br>We're so glad you're here!</b></h2>
+</div>
+</div>
+
+<div class="w3-row w3-container" style="margin:50px 0">
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-amber">
+    <img src="https://www.w3schools.com/w3images/cellphone.jpg" style="width:100%">
+    <h2>Destinations</h2><%= link_to "Click here to view our Destinations", destinations_path %>
+  </div>
+</div>
+
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-amber">
+    <img src="https://i.pinimg.com/originals/a0/03/9e/a0039e8c33b24445717045e3f2eb38e2.jpg" style="width:100%">
+    <h2>Points of Interest</h2><%= link_to "Click here to view our Points of Interest", pois_path %>
+
+  </div>
+</div>
+</div>
+
+<div class="w3-row w3-container" style="margin:50px 0">
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-orange">
+    <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_636342562_402329.jpg" style="width:100%">
+    <h2>Reviews</h2><%= link_to "Click here to view all of our Reviews" , reviews_path %>
+  </div>
+</div>
+
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-orange">
+    <img src="https://adventure.com/wp-content/uploads/2018/01/Hero-Fear-of-flying-Plane-over-Ibiza-Photo-credit-Shutterstock-Felix-B-1920x1080.jpg" style="width:100%">
+    <h2>Wishlist</h2>
+    <p>Don't wait until it is to late! Plan your next vacation!</p><%= link_to "Plan your next vacation!" , wishlists_path %>
+    </div>
+</div>
+</div>
+
+<div class="w3-row w3-container" style="margin:50px 0">
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-amber">
+    <img src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2015/12/cruise-trips.jpg?fit=1280%2C726px&ssl=1" style="width:100%">
+    <h2>Trips</h2>
+    <p><%= link_to "Take a look at your previous trips here!" , trips_path %> </p>
+  </div>
+</div>
+
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-amber">
+    <img src="https://ciaobambino.com/wp-content/uploads/2019/01/family-in-greece.jpg" style="width:100%">
+    <h2>Traveler's</h2><%= link_to "Click here to view our Traveler's Profiles", travelers_path %>
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>
