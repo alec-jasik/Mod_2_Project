@@ -27,17 +27,6 @@ class TravelersController < ApplicationController
     #     end
     # end
 
-    def create
-        @traveler = Traveler.new(trav_params)
-        if @traveler.valid?
-          @traveler.save
-          redirect_to traveler_path(@traveler)
-        else
-          flash[:errors] = @traveler.errors.full_messages
-          redirect_to new_traveler_path
-        end
-    end
-
     def authenticated?
         # check our session hash if user exists
         if session[:id] != nil 
