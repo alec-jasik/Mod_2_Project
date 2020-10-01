@@ -10,4 +10,5 @@ class Destination < ApplicationRecord
     validates :continent, presence: true
     validates :city_name, presence: true
     validates :img_url, presence: true
+
 end

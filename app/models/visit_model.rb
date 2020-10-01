@@ -1,0 +1,3 @@
+class VisitReview < ApplicationRecord
+
+end
