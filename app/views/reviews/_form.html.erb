@@ -1,0 +1,19 @@
+<%= form_with model: @review do | f |%>
+
+<%= f.label :Name %>
+<%= f.collection_select :traveler_id, Traveler.all, :id, :full_name %>
+
+<%= f.label :Visited %>
+<%= f.collection_select :poi_id, Poi.all, :id, :name %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :rating %>
+<%= f.text_field :rating %>
+
+<%= f.submit %>
+<% end %>

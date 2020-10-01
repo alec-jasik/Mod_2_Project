@@ -3,4 +3,11 @@ Rails.application.routes.draw do
   resources :destinations
   resources :pois
   resources :travelers
+  resources :reviews
+  resources :trips
+  resources :wishlists
+  resources :sessions
+  get '/sign_in', to: 'sessions#sign_in'
+  post '/sessions', to: 'sessions#create'
+  delete '/sessions', to: 'sessions#destroy'
 end

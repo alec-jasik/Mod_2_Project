@@ -1,0 +1,9 @@
+<h1>List of ALL Wishlists</h1>
+<hr>
+<% @wishlists.each do | wishlist|%>
+<ul>
+    <li><%= link_to wishlist.destination.city_name, wishlist_path(wishlist)%></li>
+</ul>
+<% end %>
+
+<%= link_to "Click here to add a trip to your wishlist" , new_wishlist_path %>

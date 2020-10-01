@@ -7,6 +7,8 @@ class PoisController < ApplicationController
     def show
         @poi = Poi.find(params[:id])
         @destinations = Destination.all
+       
+        
     end
 
     def new
@@ -28,7 +30,6 @@ class PoisController < ApplicationController
         @poi = Poi.find(params[:id])
     end
 
-    
     def update
         @poi = Poi.find(params[:id])
         @poi.update(poi_params)

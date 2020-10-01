@@ -1,0 +1,16 @@
+<%= form_with model: @destination do | f |%>
+
+<%= f.label :city_name %>
+<%= f.text_field :city_name%>
+
+<%= f.label :country_name %>
+<%= f.text_field :country_name %>
+
+<%= f.label :continent %>
+<%= f.text_field :continent %>
+
+<%= f.label :Image_URL %>
+<%= f.text_field :img_url %>
+
+<%= f.submit %>
+<% end %>

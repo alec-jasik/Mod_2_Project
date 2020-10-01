@@ -1,0 +1,13 @@
+<%= form_with model: @poi do | f |%>
+
+<%= f.label :"Select where this POI is located:" %>
+<%= f.collection_select :destination_id, Destination.all, :id, :city_name %>
+
+<%= f.label :name %>
+<%= f.text_field :name%>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit %>
+<% end %>

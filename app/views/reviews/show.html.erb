@@ -1,0 +1,12 @@
+<h1><%= @review.title %></h1>
+<hr>
+<%= @review.description %> <br><br>
+<h3>Rating (1 - 5 stars):  <%= @review.rating%></h3>
+
+
+</br>
+</br>
+<%= link_to "Click here to edit this Review!", edit_review_path%>
+</br>
+</br>
+<%= button_to "Delete Review", {:controller => :reviews, :action => 'destroy', :id => @review.id }, :method => :delete %>

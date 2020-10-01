@@ -5,4 +5,16 @@
 <hr>
 <p><%= @poi.description %></p>
 
-
+<h3>Reviews by Title (click a title to see that review):</h3>
+<%@poi.reviews.each do |review| %>
+<li><%= link_to review.title, review_path(review)%></li>
+<% end %>
+</br>
+</br>
+<%= link_to "Click here to write a review!", new_review_path%>
+</br>
+</br>
+<%= link_to "Click here to edit this Point of Interest!", edit_poi_path%>
+</br>
+</br>
+<%= button_to "Delete POI", {:controller => :pois, :action => 'destroy', :id => @poi.id }, :method => :delete %>

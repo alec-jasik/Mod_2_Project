@@ -1,0 +1,12 @@
+<%= form_with model: @trip do | f |%>
+
+<%= f.label :traveler %>
+<%= f.collection_select :traveler_id, Traveler.all, :id, :full_name %>
+
+<%= f.label :destination %>
+<%= f.collection_select :destination_id, Destination.all, :id, :city_name %>
+
+<%= f.submit %>
+<% end %>
+
+

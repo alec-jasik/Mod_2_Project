@@ -1,0 +1,8 @@
+<h1>Trip</h1>
+<hr>
+
+
+<%= link_to "Click here to edit this trip!", edit_trip_path%>
+</br>
+</br>
+<%= button_to "Delete Trip", {:controller => :trips, :action => 'destroy', :id => @trip.id }, :method => :delete %>

@@ -4,4 +4,14 @@
 <p> Continent: <%=@destination.continent%></p>
 
 <h2> Some common points of interest are listed below:</h2>
-<p> <%=@pois.find_by(destination_id: @destination.id).name%> 
+ <% @destination.pois.each do |poi| %> 
+ <%= link_to poi.name, poi_path(poi) %>
+ <% end %>
+</br>
+</br>
+<%= link_to "Click here to edit this Destination!", edit_destination_path%>
+</br>
+</br>
+<%= button_to "Delete Destination", {:controller => :destinations, :action => 'destroy', :id => @destination.id }, :method => :delete %>
+</br>
+</br><p><%=link_to image_tag(@destination.img_url)%></p>
