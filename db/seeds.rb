@@ -24,7 +24,7 @@ Wishlist.destroy_all
     Traveler.create(email: email, password: password, first_name: first_name, last_name: last_name, age: age)
 end
 
-d1 = Destination.create(city_name: "Paris", country_name: "France", continent: "Europe", img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg")
+d1 = Destination.create(city_name: "Paris", country_name: "France", continent: "Europe", img_url: "https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/paris-cityscape-overview-guide.jpg")
 d2 = Destination.create(city_name: "New York City", country_name: "United States of America", continent: "North America", img_url: "https://cdn.vox-cdn.com/thumbor/GAkZQtSESV7fbtN2L3F3a43XoBM=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18995290/New_York_City_Central_Park_from_Above.jpg")
 d3 = Destination.create(city_name: "Rio de Janeiro", country_name: "Brazil", continent: "South America", img_url: "https://www.pandotrip.com/wp-content/uploads/2013/07/Untitled-62-980x613.jpg")
 d4 = Destination.create(city_name: "Hong Kong", country_name: "China", continent: "Asia", img_url: "https://images.theconversation.com/files/349143/original/file-20200723-35-1x7it1t.jpg?ixlib=rb-1.1.0&rect=136%2C157%2C6853%2C4485&q=45&auto=format&w=926&fit=clip")

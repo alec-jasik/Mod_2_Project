@@ -18,7 +18,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #ffe8cc;
+ 
 }
 
 /* Style the topnav links */
@@ -39,18 +39,54 @@ body {
 
 /* Style the content */
 .content {
-  background-color: white;
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
   padding: 10px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+img {
+  border-radius: 15px;
+  width: 50%;
+  height: auto;
+  padding-top: 50px;
+}
+
+.content: a {
+  font-weight: bold;
 }
 
 /* Style the footer */
 .footer {
-  background-color: #ffe8cc;
+  /*background-color: #ffe8cc;*/
   padding: 10px;
 }
+
 </style>
 </head>
 <body>
+
 
 <div class="topnav">
   <%= link_to "Home", visit_reviews_path%>
@@ -67,14 +103,9 @@ body {
 <hr>
 <%= @review.description %> <br><br>
 <h3>Rating (1 - 5 stars):  <%= @review.rating%></h3>
-<p>Written by: <%= link_to @review.traveler.full_name, traveler_path(@review.traveler) %></p>
-</div>
-
-<div class="footer">
-<%= link_to "Click here to edit this Review!", edit_review_path%>
-</br>
-</br>
-<%= button_to "Delete Review", {:controller => :reviews, :action => 'destroy', :id => @review.id }, :method => :delete %>
+<p>Written by: <%= link_to @review.traveler.full_name, traveler_path(@review.traveler) %></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p><%= link_to "Click here to edit this Review!", edit_review_path%></p>
+<p><%= button_to "Delete Review", {:controller => :reviews, :action => 'destroy', :id => @review.id }, :method => :delete %></p>
 </div>
 
 </body>

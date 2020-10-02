@@ -11,6 +11,9 @@
 }
 
 body {
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -18,7 +21,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #ffe8cc;
+ 
 }
 
 /* Style the topnav links */
@@ -39,13 +42,37 @@ body {
 
 /* Style the content */
 .content {
-  background-color: white;
+  color: black;
   padding: 10px;
-  
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.content: a {
+  font-weight: bold;
+}
 
 /* Style the footer */
 .footer {
-  background-color: #ffe8cc;
+  /*background-color: #ffe8cc;*/
   padding: 10px;
 }
 </style>
@@ -62,7 +89,7 @@ body {
 </div>
 
 <div class="content">
-  <%= form_with model: @destination do | f |%>
+<%= form_with model: @destination do | f |%>
 
 <%= f.label :city_name %>
 <%= f.text_field :city_name%>
