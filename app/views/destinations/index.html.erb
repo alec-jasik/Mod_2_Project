@@ -18,7 +18,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #ffe8cc;
+ 
 }
 
 /* Style the topnav links */
@@ -39,13 +39,40 @@ body {
 
 /* Style the content */
 .content {
-  background-color: white;
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
   padding: 10px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.content: a {
+  font-weight: bold;
 }
 
 /* Style the footer */
 .footer {
-  background-color: #ffe8cc;
+  /*background-color: #ffe8cc;*/
   padding: 10px;
 }
 
@@ -70,10 +97,7 @@ body {
 <ul>
     <li><%= link_to destination.city_name, destination_path(destination) %>, <%= destination.country_name %></li>
 </ul>
-<% end %>
-</div>
-
-<div class="footer">
+<% end %><br><br><br>
 <p>If theres a place you'd like to visit and it is not listed in our database please: <%= link_to "Click here to create a new Destination" , new_destination_path %> </p>
 <p><%= link_to "Click here to create a new trip!", new_trip_path%></p>
 <p><%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%></p>

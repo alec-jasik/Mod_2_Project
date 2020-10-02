@@ -18,7 +18,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #ffe8cc;
+ 
 }
 
 /* Style the topnav links */
@@ -39,15 +39,43 @@ body {
 
 /* Style the content */
 .content {
-  background-color: white;
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
   padding: 10px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.content: a {
+  font-weight: bold;
 }
 
 /* Style the footer */
 .footer {
-  background-color: #ffe8cc;
+  /*background-color: #ffe8cc;*/
   padding: 10px;
 }
+
 </style>
 </head>
 <body>
@@ -69,11 +97,8 @@ body {
 <ul>
     <li><%= link_to traveler.full_name, traveler_path(traveler) %>  </li>
 </ul>
-<% end %>
-</div>
-
-<div class="footer">
-  <p><%= link_to "Click here to create a new Traveler profile!", new_traveler_path%></p>
+<% end %><br><br><br><br><br>
+<p><%= link_to "Click here to create a new Traveler profile!", new_traveler_path%></p>
 </div>
 
 </body>
