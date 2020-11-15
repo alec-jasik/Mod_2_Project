@@ -1,4 +1,4 @@
-# the bridge.
+# ViewReview
 ### Technical Description: 
 A Ruby on Rails App with CRUD functioning, incorporating:
 * Object Relational Mapping (with ActiveRecord)
