@@ -25,14 +25,14 @@ Wishlist.destroy_all
 end
 
 d1 = Destination.create(city_name: "Paris", country_name: "France", continent: "Europe", img_url: "https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/paris-cityscape-overview-guide.jpg")
-d2 = Destination.create(city_name: "New York City", country_name: "United States of America", continent: "North America", img_url: "https://cdn.vox-cdn.com/thumbor/GAkZQtSESV7fbtN2L3F3a43XoBM=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18995290/New_York_City_Central_Park_from_Above.jpg")
+d2 = Destination.create(city_name: "New York City", country_name: "USA", continent: "North America", img_url: "https://cdn.vox-cdn.com/thumbor/GAkZQtSESV7fbtN2L3F3a43XoBM=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18995290/New_York_City_Central_Park_from_Above.jpg")
 d3 = Destination.create(city_name: "Rio de Janeiro", country_name: "Brazil", continent: "South America", img_url: "https://www.pandotrip.com/wp-content/uploads/2013/07/Untitled-62-980x613.jpg")
 d4 = Destination.create(city_name: "Hong Kong", country_name: "China", continent: "Asia", img_url: "https://images.theconversation.com/files/349143/original/file-20200723-35-1x7it1t.jpg?ixlib=rb-1.1.0&rect=136%2C157%2C6853%2C4485&q=45&auto=format&w=926&fit=clip")
 d5 = Destination.create(city_name: "Cape Town", country_name: "South Africa", continent: "Africa", img_url: "https://media.timeout.com/images/105237728/image.jpg")
 d6 = Destination.create(city_name: "Sydney", country_name: "Australia", continent: "Australia", img_url:"https://travel.home.sndimg.com/content/dam/images/travel/fullset/2013/02/27/9b/australia_itinerary-sydney.rend.hgtvcom.1280.960.suffix/1491591580017.jpeg")
 d7 = Destination.create(city_name: "Rome", country_name: "Italy", continent: "Europe", img_url:"https://cdn.contexttravel.com/image/upload/c_fill,q_60,w_2600/v1549318570/production/city/hero_image_2_1549318566.jpg")
 d8 = Destination.create(city_name: "Berlin", country_name: "Germany", continent: "Europe", img_url:"https://media.globalchampionstour.com/cache/750x429/assets/berlin.jpg")
-d9 = Destination.create(city_name: "Las Vegas", country_name: "United States of America", continent: "North America", img_url:"https://www.telegraph.co.uk/content/dam/Travel/Destinations/North%20America/USA/Las%20Vegas/las-vegas-lead-image-xlarge.jpg")
+d9 = Destination.create(city_name: "Las Vegas", country_name: "USA", continent: "North America", img_url:"https://www.telegraph.co.uk/content/dam/Travel/Destinations/North%20America/USA/Las%20Vegas/las-vegas-lead-image-xlarge.jpg")
 d10= Destination.create(city_name: "Tokyo", country_name: "Japan", continent: "Asia", img_url:"https://stillmed.olympic.org/media/Images/OlympicOrg/News/2020/03/24/2020-03-24-tokyo-thumbnail-01.jpg")
 
 p1 = Poi.create(destination: d1, name: "Eiffel Tower", description: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France.")
@@ -53,4 +53,6 @@ p14 = Poi.create(destination: d4, name: "Temple Street Night Market", descriptio
 
 
 trip1 = Trip.create(traveler: Traveler.all.sample, destination: Destination.all.sample)
+
+puts "we seeded"
 
