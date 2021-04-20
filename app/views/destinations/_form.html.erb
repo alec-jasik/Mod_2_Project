@@ -4,18 +4,23 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+
 <style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  
+  position: relative;
+  background: url("https://www.jetsetmag.com/wp-content/uploads/2018/01/Agosto-2015-48_new.jpg") no-repeat center center/cover;
+ 
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 /* Style the top navigation bar */
@@ -36,13 +41,18 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #116EB5;
+  border: none;
   color: black;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.7s;
 }
+
 
 /* Style the content */
 .content {
-  color: black;
+  
   padding: 10px;
 }
 
@@ -89,6 +99,9 @@ a:active {
 </div>
 
 <div class="content">
+<h1>Create New Destination</h1>
+<hr>
+<br>
 <%= form_with model: @destination do | f |%>
 
 <%= f.label :city_name %>
