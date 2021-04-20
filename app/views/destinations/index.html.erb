@@ -4,16 +4,20 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
 <style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 /* Style the top navigation bar */
 .topnav {
@@ -33,13 +37,18 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #116EB5;
+  border: none;
   color: black;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.7s;
 }
 
 /* Style the content */
 .content {
-  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  background-image: url(https://www.jetsetmag.com/wp-content/uploads/2018/01/Agosto-2015-48_new.jpg);
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
@@ -56,10 +65,7 @@ a:visited {
   color: black;
 }
 
-/* mouse over link */
-a:hover {
-  color: blue;
-}
+
 
 /* selected link */
 a:active {
@@ -89,19 +95,22 @@ a:active {
   <%= link_to "Trips", trips_path %>
 </div>
 
-<div class="content">
-  <h1>List of Destinations:</h1>
-<hr>
-<h4> Click on a destination to learn more about it!</h4>
-<% @destinations.each do | destination |%>
-<ul>
-    <li><%= link_to destination.city_name, destination_path(destination) %>, <%= destination.country_name %></li>
-</ul>
-<% end %><br><br><br>
-<p>If theres a place you'd like to visit and it is not listed in our database please: <%= link_to "Click here to create a new Destination" , new_destination_path %> </p>
-<p><%= link_to "Click here to create a new trip!", new_trip_path%></p>
-<p><%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%></p>
+<div class="overlay">
+  <div class="content">
+    <h1>List of Destinations:</h1>
+  <hr>
+  <h4> Click on a destination to learn more about it!</h4>
+  <% @destinations.each do | destination |%>
+  <ul>
+      <li><%= link_to destination.city_name, destination_path(destination) %>, <%= destination.country_name %></li>
+  </ul>
+  <% end %><br><br><br>
+  <p><%= link_to "Click here to create a new Destination" , new_destination_path %> </p>
+  <p><%= link_to "Click here to create a new trip!", new_trip_path%></p>
+  <p><%= link_to "Click here to add a trip to your wishlist!", new_wishlist_path%></p>
+  </div>
 </div>
+
 
 </body>
 </html>
