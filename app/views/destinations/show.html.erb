@@ -4,15 +4,22 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
 <style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Source Sans Pro', sans-serif;
+ 
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  
+  position: relative;
+  background: url("https://ciaobambino.com/wp-content/uploads/2019/01/family-in-greece.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 /* Style the top navigation bar */
@@ -33,16 +40,12 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #4B90C6;
   color: black;
 }
 
 /* Style the content */
 .content {
-  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: black;
   padding: 10px;
 }
 
@@ -56,10 +59,6 @@ a:visited {
   color: black;
 }
 
-/* mouse over link */
-a:hover {
-  color: blue;
-}
 
 /* selected link */
 a:active {
@@ -106,7 +105,6 @@ img {
  <% @destination.pois.each do |poi| %> 
  <li><%=  link_to poi.name, poi_path(poi) %></li>
  <% end %>
-<p><%=link_to image_tag(@destination.img_url)%></p>
 </div>
 
 <div class="footer">

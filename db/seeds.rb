@@ -15,7 +15,7 @@ Review.destroy_all
 Trip.destroy_all
 Wishlist.destroy_all
 
-10.times do
+12.times do
     email = Faker::Internet.email
     password = Faker::Internet.password(min_length: 8)
     first_name = Faker::Name.first_name
